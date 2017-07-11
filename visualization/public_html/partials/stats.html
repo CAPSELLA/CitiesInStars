@@ -1,0 +1,35 @@
+<div class="row top-padding"></div>
+<div class="row top-padding">
+    <div class="col-sm-3">
+        <select ng-model="StatisticsFoursquareDataSources.selected" ng-options="source for source in StatisticsFoursquareDataSources.sources" ng-click="foursquareRedirect()">
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="progress hidden">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                0% Complete
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <svg id="brushID" width="1200" height="80"></svg>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <h1 class="text-center workout-display-div" ng-show="foursquareTitle.length > 1">{{foursquareTitle}}</h1>
+        <div id="FoursquareChart"></div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div ng-include="'partials/footer.html'"></div>

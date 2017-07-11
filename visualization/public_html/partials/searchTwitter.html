@@ -1,0 +1,51 @@
+<div class="row top-padding"></div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="progress hidden">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                0% Complete
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div class="row top-padding">
+    <form class="form-inline panel panel-default" ng-submit="TwitterExploreDataSourcesHistory.clearCurrentTwitterCity();pressedFunctionExploreDataSourcesTwitter(null)">
+        <div class="col-sm-12">
+            <h2>Search Datasets</h2>
+            <select ng-model="ExploreDataSourcesTwitterDataSources.selected" 
+                    ng-options="source for source in ExploreDataSourcesTwitterDataSources.sources" 
+                    ng-click="ExploreDataSourcesTwitterRedirect()">
+            </select>
+            <select ng-model="twitterExploreSelectedCity" 
+                    ng-options="option for option in twitterExplorePageCities.options"
+                    ng-click="pressedFunctionExploreDataSourcesTwitter(option)">
+            </select>
+            <div class="form-group">
+                <input type="text" class="form-control" id="usr" ng-model="TwitterExploreDataSourcesHistory.TwitterQuery"/>
+            </div>
+            <button type="submit" class="btn btn-default" 
+                    ng-click="TwitterExploreDataSourcesHistory.clearCurrentTwitterCity();pressedFunctionExploreDataSourcesTwitter(null)">
+                {{twitterSearchButton}}
+            </button>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <svg id="brush3ID" width="1200" height="80"></svg>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div class="row top-padding"></div>
+<div class="row top-padding">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div id="exampleDiv">
+            <table width="100%" class="display" id="example"></table>
+        </div>
+    </div>
+</div>
+<div ng-include="'partials/footer.html'"></div>

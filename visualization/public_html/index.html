@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Capsela Cities in Stars</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/capsella_favicon.png">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="http://mistic100.github.io/jQCloud/dist/jqcloud2/dist/jqcloud.min.css">
+        <link rel="stylesheet" href="css/map-icons.css" type="text/css">
+        <link href="css/app.css" rel="stylesheet" type="text/css">    
+    </head>
+    <body>
+        <nav class="leaveMargin">
+            <!--<div  class="navbar navbar-inverse navbar-fixed-top top-navbar" style="background: rgb(12,125,53) !important;">-->
+            <div class="navbar top-navbar">
+                <div class="row">
+                    <div class="col-sm-4"><a id="topImg" href="#/home"><img  width="200" height="70" alt="capsella logo" src="img/capsella_logo.png"></a></div>
+                    <div class="col-sm-4"><a href="#/home"><h1 class="page-header title">Cities in stars</h1></a></div>
+                    <div class="col-sm-4 customePills"><ul class="nav navbar-nav navbar-right nav-pills rrr">
+                            <li id="landingPage" role="presentation" class="active"><a href="#/landingPage">home</a></li>
+                            <li id="topicModeling" role="presentation"><a href="#/explore">explore</a></li>
+                            <li id="statistics" role="presentation"><a href="#/stats">stats</a></li>
+                            <li id="exploreDataSources" role="presentation"><a href="#/search">search</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container body-content app-container">
+            <div ng-view></div>
+        </div>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUgYGlBX4nfuuI54k-LUw0ogmL7Nk66rY&libraries=visualization"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular-route.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular-sanitize.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular-animate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.compatibility.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+        <script src="http://mistic100.github.io/jQCloud/dist/jqcloud2/dist/jqcloud.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="js/libs/map-icons.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/exploreDataSourcesController.js"></script>
+        <script src="js/controllers/statisticsController.js"></script>
+        <script src="js/controllers/topicModelingController.js"></script>
+        <script src="js/controllers/twitterStatisticsController.js"></script>
+        <script src="js/controllers/exploreDataSourcesTwitterController.js"></script>
+        <script src="js/controllers/landingPageController.js"></script>
+        <script src="js/sharedFunctions.js"></script>
+    </body>
+</html>
